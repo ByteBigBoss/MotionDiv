@@ -2,10 +2,13 @@
 import React from 'react';
 import '@/app/css/themeSwitch.css';
 import { useEffect, useState } from 'react';
+import { useTheme } from '@/context/ThemeContext';
+
 
 const ThemeToggleSwitch = () => {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(()=>{
     const storedTheme = localStorage.getItem('theme');
@@ -17,10 +20,13 @@ const ThemeToggleSwitch = () => {
     if(isDarkMode){
       document.documentElement.classList.add('dark');
       localStorage.setItem("theme", "dark");
+      toggleTheme();
     }else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem("theme", "light");
+      toggleTheme();
     }
+    
 
   },[isDarkMode]);
 

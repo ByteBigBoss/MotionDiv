@@ -15,3 +15,74 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+/* ############################################### */
+/* media queries */
+/* Nano Small Screen (ns) */
+@media (max-width: 359px) {
+  /* Your CSS rules for small screens here */
+  .frame-container {
+    width: 90%;
+  }
+}
+
+/* Small small Screen (ss) */
+@media (min-width:360px) and (max-width: 640px) {
+  /* Your CSS rules for small screens here */
+  .frame-container {
+    width: calc(100% - 20px);/*100% - 32px - default {16, 24, 32}*/
+  }
+}
+
+/* Small Screen (sm) */
+@media (min-width: 640px) and (max-width: 767px) {
+  /* Your CSS rules for small screens here */
+  .frame-container {
+    width: 94%;
+  }
+}
+
+/* Medium Screen (md) */
+@media (min-width: 768px) and (max-width: 1119px) {
+  /* Your CSS rules for medium screens here */
+  .frame-container {
+    width: 94%;
+  }
+}
+
+/* Large Screen (lg) */
+@media (min-width: 1120px) and (max-width: 1279px) {
+  /* Your CSS rules for large screens here */
+  .frame-container {
+    width: 90%;
+  }
+}
+
+/* Extra Large Screen (xl) */
+@media (min-width: 1280px) and (max-width: 1399px) {
+  /* Your CSS rules for extra large screens here */
+  .frame-container {
+    width: 90%;
+  }
+}
+
+/* 2 Extra Large Screen (2xl) */
+@media (min-width: 1400px) and (max-width: 1859px) {
+  /* Your CSS rules for 2 extra large screens here */
+  .frame-container {
+    width: 1344px;
+  }
+}
+
+/* 3 Extra Large Screen (3xl) */
+@media (min-width: 1860px) {
+  /* Your CSS rules for 3 extra large screens here */
+  .frame-container {
+    width: 1728px;
+  }
+}
+
+
+.hide-scrollbar::-webkit-scrollbar{
+  display: none;
+}

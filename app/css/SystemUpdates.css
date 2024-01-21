@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root[theme="light"] {
+
+  --btx-primary: black;
+
+}
+
+:root[theme="dark"] {
+
+  --btx-primary: white;
+
+}
+
+.bgBtxPrimary{background-color: var(--btx-primary);}
